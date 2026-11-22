@@ -1,6 +1,6 @@
 # Signed release for the Terraform and OpenTofu registries, on a v* tag.
-# Repository secrets: GPG_PRIVATE_KEY (armored private key of the release key) and
-# PASSPHRASE (empty if the key has none).
+# Repository secret: GPG_PRIVATE_KEY (armored private key of the release key, which has
+# no passphrase so releases run unattended).
 name: release
 on:
   push:
@@ -20,7 +20,6 @@ jobs:
         uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
       - uses: goreleaser/goreleaser-action@v6
         with:
           version: "~> v2"
