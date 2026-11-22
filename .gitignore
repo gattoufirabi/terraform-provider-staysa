@@ -1,0 +1,7 @@
+terraform-provider-staysa
+terraform-provider-staysa.exe
+dist/
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
