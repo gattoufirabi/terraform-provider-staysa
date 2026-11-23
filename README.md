@@ -8,7 +8,7 @@ platform as code. Works with OpenTofu and Terraform 1.0+.
 terraform {
   required_providers {
     staysa = {
-      source = "gattoufirabi/staysa"
+      source = "registry.opentofu.org/gattoufirabi/staysa"
     }
   }
 }
@@ -59,7 +59,7 @@ folder holding the binary, then run `plan` / `apply` without `init`:
 ```hcl
 provider_installation {
   dev_overrides {
-    "gattoufirabi/staysa" = "/path/to/terraform-provider-staysa"
+    "registry.opentofu.org/gattoufirabi/staysa" = "/path/to/terraform-provider-staysa"
   }
   direct {}
 }

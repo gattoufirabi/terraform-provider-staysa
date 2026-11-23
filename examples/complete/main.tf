@@ -3,7 +3,7 @@
 terraform {
   required_providers {
     staysa = {
-      source = "gattoufirabi/staysa"
+      source = "registry.opentofu.org/gattoufirabi/staysa"
     }
   }
 }

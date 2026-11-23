@@ -19,7 +19,7 @@ func main() {
 	flag.BoolVar(&debug, "debug", false, "run with support for debuggers such as delve")
 	flag.Parse()
 	err := providerserver.Serve(context.Background(), provider.New(version), providerserver.ServeOpts{
-		Address: "registry.terraform.io/gattoufirabi/staysa",
+		Address: "registry.opentofu.org/gattoufirabi/staysa",
 		Debug:   debug,
 	})
 	if err != nil {
