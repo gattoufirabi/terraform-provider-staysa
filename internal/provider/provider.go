@@ -90,6 +90,8 @@ func (p *staysaProvider) Resources(context.Context) []func() resource.Resource {
 		newDNSZoneResource,
 		newDNSRecordResource,
 		newBucketResource,
+		newServiceSourceResource,
+		newServerBuildsResource,
 	}
 }
 

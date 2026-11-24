@@ -29,7 +29,7 @@ resource "staysa_service" "web" {
 
 | Resources | Data sources |
 |---|---|
-| `staysa_project`, `staysa_service`, `staysa_service_secret`, `staysa_project_variable`, `staysa_database`, `staysa_domain`, `staysa_dns_zone`, `staysa_dns_record`, `staysa_bucket` | `staysa_project`, `staysa_service`, `staysa_database` |
+| `staysa_project`, `staysa_service`, `staysa_service_secret`, `staysa_project_variable`, `staysa_database`, `staysa_domain`, `staysa_dns_zone`, `staysa_dns_record`, `staysa_bucket`, `staysa_service_source`, `staysa_server_builds` | `staysa_project`, `staysa_service`, `staysa_database` |
 
 Documentation for every attribute and import ID is in [`docs/`](docs/) and on the registry.
 A complete example (database, autoscaled application, secret) is in
@@ -38,7 +38,8 @@ A complete example (database, autoscaled application, secret) is in
 ## Authentication
 
 Create an API token in the console under **Access > API tokens**. The **admin** role is needed
-to create and delete projects and to delete databases, zones and buckets; **developer** is
+to create and delete projects, to delete databases, zones and buckets, and for
+`staysa_server_builds`; **developer** is
 enough for applications, secrets and domains. A token limited to one project manages only that
 project.
 
